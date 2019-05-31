@@ -1,3 +1,6 @@
+import { CustomersModule } from './customers/customers.module';
+import { UiLoginModule } from './../../../../libs/ui-login/src/lib/ui-login.module';
+import { AppRoutingModule } from './app-routing.module';
 import { ProjectsModule } from './projects/projects.module';
 import { HomeModule } from './home/home.module';
 import { MaterialModule } from './../../../../libs/material/src/lib/material.module';
@@ -12,11 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
     MaterialModule,
-    HomeModule,
-    ProjectsModule
+    UiLoginModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
